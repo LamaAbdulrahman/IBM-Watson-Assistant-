@@ -1,0 +1,486 @@
+{
+  "intents": [
+    {
+      "intent": "Flavor-Question",
+      "examples": [
+        {
+          "text": "What are the flavors?"
+        },
+        {
+          "text": "What flavors do you have?"
+        },
+        {
+          "text": "what kind of flavors do u have?"
+        },
+        {
+          "text": "which flavors do u offer?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Flavors",
+      "examples": [
+        {
+          "text": "Chocolate"
+        },
+        {
+          "text": "Chocolate please"
+        },
+        {
+          "text": "chocolate,please"
+        },
+        {
+          "text": "i want chocolate"
+        },
+        {
+          "text": "I want chocolate ice cream"
+        },
+        {
+          "text": "i want chocolate icecream"
+        },
+        {
+          "text": "i want strawberry"
+        },
+        {
+          "text": "I want strawberry ice cream"
+        },
+        {
+          "text": "i want strawberry icecream"
+        },
+        {
+          "text": "i want vanilla"
+        },
+        {
+          "text": "i want vanilla ice cream"
+        },
+        {
+          "text": "i want vanilla icecream"
+        },
+        {
+          "text": "i would like to order chocolate"
+        },
+        {
+          "text": "i would like to order strawberry"
+        },
+        {
+          "text": "i would like to order vanilla"
+        },
+        {
+          "text": "Strawberry"
+        },
+        {
+          "text": "Strawberry please"
+        },
+        {
+          "text": "strawberry,please"
+        },
+        {
+          "text": "Vanilla"
+        },
+        {
+          "text": "Vanilla please"
+        },
+        {
+          "text": "vanilla,please"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "HowAreYou",
+      "examples": [
+        {
+          "text": "How are you?"
+        },
+        {
+          "text": "How are you doing?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "OpenHours",
+      "examples": [
+        {
+          "text": "Are you open on Sunday?"
+        },
+        {
+          "text": "Hours of operation"
+        },
+        {
+          "text": "what are your hours"
+        },
+        {
+          "text": "What are your hours?"
+        },
+        {
+          "text": "What time are you closing today?"
+        },
+        {
+          "text": "What time do stores close?"
+        },
+        {
+          "text": "What time do you close"
+        },
+        {
+          "text": "what time do you close on Sunday"
+        },
+        {
+          "text": "What time do you close today"
+        },
+        {
+          "text": "What time do you open on Saturdays"
+        },
+        {
+          "text": "What time is your store open on saturday?"
+        },
+        {
+          "text": "when do you close"
+        },
+        {
+          "text": "will you be open Memorial day"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "State",
+      "examples": [
+        {
+          "text": "Fine"
+        },
+        {
+          "text": "Great"
+        },
+        {
+          "text": "I'm doing well"
+        },
+        {
+          "text": "I'm doing well, thank you"
+        },
+        {
+          "text": "I'm fine"
+        },
+        {
+          "text": "I'm great"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "TakeOrder",
+      "examples": [
+        {
+          "text": "Can you take my ice cream order?"
+        },
+        {
+          "text": "Can you take my order?"
+        },
+        {
+          "text": "i wanna buy ice cream"
+        },
+        {
+          "text": "I wanna ice cream"
+        },
+        {
+          "text": "I want to buy an icecream"
+        },
+        {
+          "text": "i want to order"
+        },
+        {
+          "text": "i want to order an ice cream"
+        },
+        {
+          "text": "I want to order an icecream"
+        },
+        {
+          "text": "I want to order ice cream"
+        },
+        {
+          "text": "i want to order icecream"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "thanks",
+      "examples": [
+        {
+          "text": "i appreciate it"
+        },
+        {
+          "text": "many thanks"
+        },
+        {
+          "text": "much appreciated"
+        },
+        {
+          "text": "thanks"
+        },
+        {
+          "text": "thank you"
+        },
+        {
+          "text": "thank you very much"
+        },
+        {
+          "text": "that's nice of you"
+        },
+        {
+          "text": "thx"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "welcome",
+      "examples": [
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "hello there"
+        },
+        {
+          "text": "Hey"
+        },
+        {
+          "text": "Hi"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi, I'm Fred how can I help you?\n"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_9_1626266600217",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello there :), how are you?"
+              },
+              {
+                "text": "Hello, how are you doing?"
+              },
+              {
+                "text": "Hello, what's your question?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#welcome",
+      "dialog_node": "node_1_1625514322657"
+    },
+    {
+      "type": "standard",
+      "title": "order",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sure, what flavor of ice cream do you want?"
+              },
+              {
+                "text": "Sure, what flavor?"
+              },
+              {
+                "text": "Which flavor : chocolate , vanilla , strawberry?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#TakeOrder",
+      "dialog_node": "node_2_1626265864945",
+      "previous_sibling": "node_5_1625514916823"
+    },
+    {
+      "type": "standard",
+      "title": "flavor-resonse",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "We have: chocolate , vanilla and strawberry. Which one would u like to order?"
+              },
+              {
+                "text": "Chocolate , vanilla and strawberry. Which one would u like to order?"
+              },
+              {
+                "text": "We have: chocolate , vanilla and strawberry. Which one would u like me to take for u?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1626265864945",
+      "conditions": "#Flavor-Question",
+      "dialog_node": "node_3_1626266386458"
+    },
+    {
+      "type": "standard",
+      "title": "order-flavor",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Great choice! your order has been confirmed."
+              },
+              {
+                "text": "Order confirmed! will redirect you to the payment page."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1626266386458",
+      "conditions": "#Flavors",
+      "dialog_node": "node_4_1626266494137"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I'm doing well "
+              },
+              {
+                "text": "Great, how about yourself?"
+              },
+              {
+                "text": "Fine, thank you"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#HowAreYou",
+      "dialog_node": "node_5_1625514916823",
+      "previous_sibling": "node_1_1625514322657"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good to hear."
+              },
+              {
+                "text": "Great :)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#State",
+      "dialog_node": "node_5_1625515048703",
+      "previous_sibling": "node_2_1626265864945"
+    },
+    {
+      "type": "standard",
+      "title": "YoureWelcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "No problem!"
+              },
+              {
+                "text": "Anytime!"
+              },
+              {
+                "text": "You're welcome!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#thanks",
+      "dialog_node": "node_9_1626266600217",
+      "previous_sibling": "node_5_1625515048703"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "intent_classification": {
+      "training_backend_version": "v2"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "Fred's Skills",
+  "language": "en",
+  "description": ""
+}
